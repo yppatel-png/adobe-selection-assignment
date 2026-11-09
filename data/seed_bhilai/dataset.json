@@ -1,0 +1,41 @@
+{
+  "profile": "iit_bhilai",
+  "institution": "Indian Institute of Technology Bhilai",
+  "programme": "BTech in Computer Science and Engineering",
+  "source": "IIT Bhilai Courses of Study, October 2026; applicable for 2023 batch onwards",
+  "source_file": "data/raw/courses of study.pdf",
+  "full_extraction": "data/raw/courses_of_study_extracted.json",
+  "source_page_count": 208,
+  "source_pages_used": [
+    9,
+    10,
+    11,
+    12,
+    21,
+    22,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    136,
+    137,
+    138,
+    139
+  ],
+  "provenance_tiers": {
+    "tier_1": "Verified PDF facts: course identity, codes, credits, L-T-P-C, schedule, programme structure, and printed prerequisite statements.",
+    "tier_2": "Explicit demo assumptions marked pending ordinance and never represented as IIT Bhilai policy.",
+    "tier_3": "Team-authored and derived skills, lessons, goal templates, and original assessments; skill links cite source syllabus pages where applicable."
+  },
+  "limitations": [
+    "No CS minor pathway or eligibility is stated in the supplied PDF.",
+    "CSE catalogue-only courses are not assigned to BTech CSE PE/OE slots; their use is visibly assumption-backed.",
+    "IC100 in the CSP352 prerequisite is printed in the source but could not be resolved to a course entry in this PDF.",
+    "The PDF prints SL302 in one programme table and CSL302 in the next table/catalogue.",
+    "The Liberal Arts catalogue titles and credits are verified; team-authored lessons are not official course syllabi."
+  ]
+}
