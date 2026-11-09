@@ -1,0 +1,38 @@
+name: Verify Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Run Reproducible Data Pipeline
+      run: |
+        python run_pipeline.py
+
+    - name: Verify Deliverables Exist
+      run: |
+        test -f chunks.jsonl
+        test -f data/processed/courses.json
+        test -f data/processed/prerequisites.json
+        test -f data/processed/skills.json
+        test -f data/processed/academic_rules.json
+        test -f data/processed/resources.json
+        test -f data/processed/modules.json
+        test -f data/processed/exercises.json
+        test -f DATA_QUALITY.md
+        test -f IDEAS.md
+        test -f SOURCES.md
+        echo "All deliverables verified successfully!"
